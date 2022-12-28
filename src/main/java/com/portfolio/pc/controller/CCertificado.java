@@ -63,6 +63,9 @@ public class CCertificado {
     if(StringUtils.isBlank(dtocertificado.getTitulo())){
     return new ResponseEntity(new Mensaje("El nombre es obligatorio"),HttpStatus.BAD_REQUEST);
     }
+    if(StringUtils.isBlank(dtocertificado.getImg())){
+    return new ResponseEntity(new Mensaje("la imagen es obligatoria"),HttpStatus.BAD_REQUEST);
+    }
     if(sCertificado.existsByTitulo(dtocertificado.getTitulo())){
     return new ResponseEntity(new Mensaje("Ese titulo ya existe"),HttpStatus.BAD_REQUEST);
     }

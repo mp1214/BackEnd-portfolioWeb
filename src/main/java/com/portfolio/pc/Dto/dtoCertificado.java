@@ -5,6 +5,7 @@
 package com.portfolio.pc.Dto;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -13,7 +14,11 @@ import javax.validation.constraints.NotBlank;
 public class dtoCertificado {
    
     @NotBlank
+    @NotNull
     private String titulo;
+    
+    @NotNull
+    @NotBlank
     private String img;
 
     public dtoCertificado() {
